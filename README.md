@@ -1,38 +1,97 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+# 🚗 DIO - Trilha .NET: Fundamentos  
+🔗 [www.dio.me](https://www.dio.me)
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+## 💡 Desafio de Projeto: Sistema de Estacionamento
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+Este projeto faz parte da trilha de Fundamentos .NET da DIO. O objetivo é aplicar os conhecimentos adquiridos para desenvolver um sistema funcional de gerenciamento de veículos em um estacionamento.
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+---
 
-A classe contém três variáveis, sendo:
+## 📦 Contexto
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+Você foi contratado para desenvolver um sistema de controle de estacionamento. Ele deve permitir:
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+- ✅ Adicionar veículos
+- ✅ Remover veículos (calculando o valor a ser pago)
+- ✅ Listar os veículos estacionados
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+---
 
-A classe contém três métodos, sendo:
+## 🧠 Proposta Técnica
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+Implemente a classe `Estacionamento` conforme o diagrama abaixo:  
+📎 *[Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)*
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+### 🧱 Estrutura da Classe
 
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+| Variável       | Tipo     | Descrição                                                  |
+|----------------|----------|-------------------------------------------------------------|
+| `precoInicial` | `decimal`| Valor fixo cobrado ao estacionar                           |
+| `precoPorHora` | `decimal`| Valor cobrado por hora de permanência                      |
+| `veiculos`     | `List<string>` | Lista contendo as placas dos veículos estacionados |
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
+### 🔧 Métodos
+
+- `AdicionarVeiculo()`  
+  Recebe a placa do veículo e adiciona à lista.
+
+- `RemoverVeiculo()`  
+  Verifica se o veículo está estacionado, solicita a quantidade de horas e calcula o valor total:  
+  **`valorTotal = precoInicial + (precoPorHora * horas)`**
+
+- `ListarVeiculos()`  
+  Exibe todos os veículos estacionados ou uma mensagem informando que não há veículos.
+
+---
+
+## 🖥️ Menu Interativo
+
+O sistema deve apresentar as seguintes opções ao usuário:
+
+- Cadastrar veículo
+- Remover veículo
+- Listar veículos
+- Encerrar
 
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+---
+
+## 🛠️ Solução
+
+O código base está parcialmente implementado. Procure pelas marcações `// TODO` e complete as funcionalidades conforme as regras acima.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- .NET 6+
+- C#
+- Programação Orientada a Objetos (POO)
+- Console Application
+
+---
+
+## 🧪 Teste e Validação
+
+Após implementar, execute o programa e teste todos os cenários:
+
+- Inserção de múltiplos veículos
+- Remoção com cálculo correto
+- Listagem com e sem veículos
+
+---
+
+## 🤝 Contribuição
+
+Sinta-se à vontade para abrir issues, propor melhorias ou enviar pull requests. Vamos construir juntos!
+
+---
+
+## 🧭 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Engenheiro: [SERGIOAERO](https://github.com/SERGIOAERO)
+
